@@ -224,7 +224,7 @@
     <div class="relative z-10 flex flex-col h-screen w-full p-2 sm:p-6">
         
         <!-- Header -->
-        <header class="flex justify-between items-center w-full mb-6 neon-border bg-cyber-panel p-3">
+        <header class="flex justify-between items-center w-full mb-4 sm:mb-6 neon-border bg-cyber-panel p-3">
             <div class="flex items-center gap-4">
                 <h1 class="font-display font-bold text-xl sm:text-2xl tracking-widest text-white glitch" data-text="0xPORTFOLIO">0xPORTFOLIO</h1>
                 <span class="hidden sm:inline-block text-[10px] text-cyber-red border border-cyber-red px-2 py-1 uppercase animate-pulse">Pride</span>
@@ -243,16 +243,17 @@
         </header>
 
         <!-- Main Layout Flex -->
-        <div class="flex flex-1 gap-6 overflow-hidden flex-col md:flex-row">
+        <div class="flex flex-1 gap-4 sm:gap-6 overflow-hidden flex-col md:flex-row">
             
             <!-- Left Sidebar -->
-            <aside class="w-full md:w-64 flex flex-col gap-6 shrink-0 overflow-y-auto pr-2" style="max-height: 100%;">
+            <aside class="w-full md:w-64 flex flex-row md:flex-col gap-4 sm:gap-6 shrink-0 overflow-y-auto pr-2" style="max-height: 100%;">
                 
-                <div class="neon-border bg-cyber-panel p-4 relative">
+                <div class="neon-border bg-cyber-panel p-4 relative hidden md:block">
                     <div class="absolute top-0 right-0 p-1 text-[8px] text-cyber-red border-b border-l border-cyber-red">ID: 9948</div>
                     
                     <div class="w-20 h-20 mb-4 rounded-full border-2 border-cyber-cyan mx-auto overflow-hidden shadow-[0_0_15px_rgba(8,247,254,0.3)] bg-cyber-dark">
-                        <img src="https://raw.githubusercontent.com/hendroah/Portofolio-WEB3/4ce1d8b3d776ed9a9261d5040f8cfee4780e09fc/IMG-20260602-WA0080.jpg" alt="Hend Profile" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://via.placeholder.com/150/050505/08f7fe?text=Hend';">
+                        <!-- Profile Image -->
+                        <img src="https://raw.githubusercontent.com/hendroah/Portofolio-WEB3/4ce1d8b3d776ed9a9261d5040f8cfee4780e09fc/IMG-20260602-WA0080.jpg" alt="Hend Profile" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/150x150/050505/08f7fe?text=Hend';">
                     </div>
 
                     <h2 class="text-center font-display text-cyber-red font-bold tracking-wider mb-1">Hend</h2>
@@ -270,8 +271,8 @@
                     </div>
                 </div>
 
-                <nav class="neon-border bg-cyber-panel p-4 flex-1 flex flex-col">
-                    <div class="text-[10px] text-gray-500 mb-4 border-b border-gray-800 pb-1">/// DIRECTORY_ACCESS</div>
+                <nav class="neon-border bg-cyber-panel p-4 flex-1 flex flex-col min-w-[200px]">
+                    <div class="text-[10px] text-gray-500 mb-4 border-b border-gray-800 pb-1 hidden md:block">/// DIRECTORY_ACCESS</div>
                     <ul class="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-2 md:pb-0" id="nav-menu">
                         <li><button type="button" class="nav-link active uppercase tracking-wider hover:text-cyber-red focus:outline-none whitespace-nowrap" data-target="home"><i class="fa-solid fa-terminal mr-3"></i>Terminal</button></li>
                         <li><button type="button" class="nav-link uppercase tracking-wider hover:text-cyber-red focus:outline-none whitespace-nowrap" data-target="art"><i class="fa-solid fa-palette mr-3"></i>Art</button></li>
@@ -286,18 +287,19 @@
 
             <!-- Main Content Area -->
             <main class="flex-1 neon-border bg-cyber-panel p-1 relative overflow-hidden flex flex-col">
-                <div class="h-6 border-b border-gray-800 flex items-center px-2 justify-between bg-black bg-opacity-50">
+                <!-- Window Header Bar -->
+                <div class="h-6 border-b border-gray-800 flex items-center px-2 justify-between bg-black bg-opacity-50 shrink-0">
                     <div class="flex gap-1">
                         <div class="w-2 h-2 rounded-full bg-cyber-red opacity-50"></div>
                         <div class="w-2 h-2 rounded-full bg-yellow-500 opacity-50"></div>
                         <div class="w-2 h-2 rounded-full bg-green-500 opacity-50"></div>
                     </div>
-                    <div class="text-[10px] text-gray-500" id="window-title">@Hendroabdh // home</div>
+                    <div class="text-[10px] text-gray-500 font-mono" id="window-title">@Hendroabdh // home</div>
                 </div>
 
-                <div class="p-4 sm:p-8 overflow-y-auto h-full flex-1 relative">
+                <div class="p-4 sm:p-8 overflow-y-auto h-full flex-1 relative scroll-smooth">
                     
-                    <!-- HOME -->
+                    <!-- HOME TAB CONTENT -->
                     <div id="home" class="window-content active">
                         <div class="font-mono text-sm sm:text-base leading-relaxed">
                             <p class="text-cyber-cyan mb-2">> System initialize...</p>
@@ -309,7 +311,7 @@
                                 I am a digital explorer at the intersection of art, decentralization, and markets. Building and hacking the Web3 space, analyzing on-chain data, and creating new visual realities.
                             </p>
                             
-                            <div class="inline-block border border-cyber-red p-4 bg-cyber-dark relative">
+                            <div class="inline-block border border-cyber-red p-4 bg-cyber-dark relative mb-8">
                                 <div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-cyber-red"></div>
                                 <div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-cyber-red"></div>
                                 <p class="text-cyber-red font-bold tracking-widest uppercase mb-1">Current Mission:</p>
@@ -318,7 +320,7 @@
                         </div>
                     </div>
 
-                    <!-- ART -->
+                    <!-- ART TAB CONTENT -->
                     <div id="art" class="window-content">
                         <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
                             <i class="fa-solid fa-palette mr-3"></i> DIGITAL_ART_GALLERY
@@ -357,7 +359,7 @@
                         </div>
                     </div>
 
-                    <!-- RESEARCH -->
+                    <!-- RESEARCH TAB CONTENT -->
                     <div id="research" class="window-content">
                         <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
                             <i class="fa-solid fa-microscope mr-3"></i> ONCHAIN_RESEARCH_ARCHIVE
@@ -371,7 +373,273 @@
                                 <p class="text-sm text-gray-400 mb-3">This is a placeholder for your research content. Please replace it with your research details, case studies, or on-chain analysis.</p>
                                 <a href="https://github.com/hendroah" target="_blank" class="text-cyber-cyan text-xs hover:text-white hover:underline">> READ_FULL_DOCUMENT.PDF</a>
                             </div>
+                            
                             <div class="border-l-2 border-cyber-red bg-cyber-dark p-4 hover:bg-gray-900 transition-colors">
                                 <div class="flex justify-between items-start mb-2">
-                                    <h3 class="text-white font-bold text-lg">Research Content #2</h3>
-                                    <span class="text-[10px] border bord
+                                    <h3 class="text-white font-bold text-lg">MEV Bot Front-Running Strategies</h3>
+                                    <span class="text-[10px] border border-gray-700 px-2 py-1 text-gray-400">2025.11.23</span>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-3">Reverse engineering recent mempool exploit mechanics. Contains extracted contract calls and block re-ordering examples.</p>
+                                <a href="https://github.com/hendroah" target="_blank" class="text-cyber-red text-xs hover:text-white hover:underline">> ACCESS_DENIED.TXT <i class="fa-solid fa-lock text-[10px]"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WEB3 TAB CONTENT -->
+                    <div id="web3" class="window-content">
+                        <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
+                            <i class="fa-brands fa-hive mr-3"></i> WEB3_PROTOCOLS
+                        </h2>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 neon-border-cyan bg-black bg-opacity-40">
+                                <div class="flex justify-between items-center mb-4 border-b border-gray-800 pb-2">
+                                    <h3 class="font-bold text-cyber-cyan"><i class="fa-solid fa-link"></i> Smart Contract</h3>
+                                    <span class="text-[10px] bg-green-900 text-green-400 px-2 rounded">Deployed</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-4 line-clamp-2">A decentralized escrow protocol supporting multi-sig arbitration. Built with Solidity and Hardhat.</p>
+                                <div class="text-[10px] font-mono text-gray-500 break-all bg-gray-900 p-2 rounded">0x71C...8976F</div>
+                            </div>
+                            
+                            <div class="p-4 neon-border bg-black bg-opacity-40">
+                                <div class="flex justify-between items-center mb-4 border-b border-gray-800 pb-2">
+                                    <h3 class="font-bold text-cyber-red"><i class="fa-solid fa-cubes"></i> Tokenomics Visualizer</h3>
+                                    <span class="text-[10px] bg-yellow-900 text-yellow-400 px-2 rounded">Beta</span>
+                                </div>
+                                <p class="text-xs text-gray-400 mb-4 line-clamp-2">React-based DApp to visualize vesting schedules and token distribution models using real-time graphs.</p>
+                                <div class="text-[10px] font-mono text-gray-500 break-all bg-gray-900 p-2 rounded">github.com/hendroah/token-viz</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TRADING TAB CONTENT -->
+                    <div id="trading" class="window-content">
+                        <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
+                            <i class="fa-solid fa-chart-line mr-3"></i> MARKET_METRICS
+                        </h2>
+                        
+                        <div class="flex flex-col gap-6">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                <div class="border border-gray-800 p-4 text-center bg-black">
+                                    <div class="text-gray-500 text-[10px] mb-1">TOTAL_VOL</div>
+                                    <div class="text-cyber-cyan font-bold text-lg">24.5K ETH</div>
+                                </div>
+                                <div class="border border-gray-800 p-4 text-center bg-black">
+                                    <div class="text-gray-500 text-[10px] mb-1">WIN_RATE</div>
+                                    <div class="text-green-500 font-bold text-lg">68.2%</div>
+                                </div>
+                                <div class="border border-gray-800 p-4 text-center bg-black">
+                                    <div class="text-gray-500 text-[10px] mb-1">PNL_30D</div>
+                                    <div class="text-green-500 font-bold text-lg">+14.2%</div>
+                                </div>
+                                <div class="border border-gray-800 p-4 text-center bg-black">
+                                    <div class="text-gray-500 text-[10px] mb-1">RISK_LEVEL</div>
+                                    <div class="text-cyber-red font-bold text-lg">HIGH</div>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-800 bg-black p-4">
+                                <div class="text-gray-500 text-xs mb-4">/// ASCI_CHART_SIMULATION [BTC/USD]</div>
+                                <pre class="text-[8px] sm:text-[10px] text-green-500 overflow-x-auto leading-none">
+     .                                     .
+   /   \                                 /   \
+  /     \      /\                       /     \
+ /       \    /  \      /\             /       \
+/         \  /    \    /  \           /         \
+           \/      \  /    \         /           \
+                    \/      \       /             \
+                             \     /               \
+                              \   /                 \
+                               \ /                   \
+                                v                     v
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ALBUM TAB CONTENT -->
+                    <div id="album" class="window-content">
+                        <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
+                            <i class="fa-solid fa-images mr-3"></i> VISUAL_RECORDS
+                        </h2>
+                        
+                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+                            <div class="break-inside-avoid relative group border border-gray-800 hover:border-cyber-cyan transition-colors">
+                                <img src="https://raw.githubusercontent.com/hendroah/Portofolio-WEB3/4ce1d8b3d776ed9a9261d5040f8cfee4780e09fc/IMG-20260602-WA0080.jpg" alt="Memory 1" class="w-full grayscale hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100">
+                                <div class="absolute bottom-0 left-0 bg-black bg-opacity-80 w-full p-2 text-[10px] border-t border-cyber-cyan transform translate-y-full group-hover:translate-y-0 transition-transform">
+                                    <span>IRL_MEETUP_01.jpg</span>
+                                </div>
+                            </div>
+                            
+                            <div class="break-inside-avoid relative group border border-gray-800 hover:border-cyber-red transition-colors">
+                                <img src="https://raw.githubusercontent.com/hendroah/Portofolio-WEB3/4ce1d8b3d776ed9a9261d5040f8cfee4780e09fc/IMG-20260602-WA0080.jpg" alt="Memory 2" class="w-full hue-rotate-180 contrast-125 opacity-80 group-hover:opacity-100 transition-all">
+                                <div class="absolute bottom-0 left-0 bg-black bg-opacity-80 w-full p-2 text-[10px] border-t border-cyber-red transform translate-y-full group-hover:translate-y-0 transition-transform">
+                                    <span>HACKATHON_TEAM.jpg</span>
+                                </div>
+                            </div>
+
+                            <div class="break-inside-avoid relative group border border-gray-800 hover:border-cyber-cyan transition-colors">
+                                <img src="https://raw.githubusercontent.com/hendroah/Portofolio-WEB3/4ce1d8b3d776ed9a9261d5040f8cfee4780e09fc/IMG-20260602-WA0080.jpg" alt="Memory 3" class="w-full invert opacity-60 group-hover:opacity-100 transition-all">
+                                <div class="absolute bottom-0 left-0 bg-black bg-opacity-80 w-full p-2 text-[10px] border-t border-cyber-cyan transform translate-y-full group-hover:translate-y-0 transition-transform">
+                                    <span>STUDIO_SETUP.png</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT TAB CONTENT -->
+                    <div id="contact" class="window-content">
+                        <h2 class="text-2xl font-display text-cyber-cyan mb-6 flex items-center border-b border-gray-800 pb-2">
+                            <i class="fa-solid fa-satellite-dish mr-3"></i> SECURE_COMMS
+                        </h2>
+                        
+                        <div class="flex flex-col gap-6 max-w-2xl">
+                            <div class="flex gap-4">
+                                <a href="https://github.com/hendroah" target="_blank" class="flex-1 text-center p-3 border border-gray-800 hover:border-cyber-cyan hover:text-cyber-cyan transition-all bg-black">
+                                    <i class="fa-brands fa-github text-2xl mb-2"></i>
+                                    <div class="text-[10px]">GITHUB</div>
+                                </a>
+                                <a href="#" class="flex-1 text-center p-3 border border-gray-800 hover:border-cyber-cyan hover:text-cyber-cyan transition-all bg-black">
+                                    <i class="fa-brands fa-twitter text-2xl mb-2"></i>
+                                    <div class="text-[10px]">X / TWITTER</div>
+                                </a>
+                                <a href="#" class="flex-1 text-center p-3 border border-gray-800 hover:border-cyber-cyan hover:text-cyber-cyan transition-all bg-black">
+                                    <i class="fa-brands fa-discord text-2xl mb-2"></i>
+                                    <div class="text-[10px]">DISCORD</div>
+                                </a>
+                            </div>
+
+                            <div class="border border-gray-800 bg-black p-1">
+                                <div class="bg-gray-900 px-3 py-1 text-[10px] text-gray-500 border-b border-gray-800">Direct Message Terminal</div>
+                                <div class="p-4 font-mono">
+                                    <div class="text-gray-400 mb-2">Enter message payload below. End with ENTER.</div>
+                                    <div class="flex items-center text-cyber-cyan">
+                                        <span class="mr-2">root@hendroabdh:~$</span>
+                                        <input type="text" class="bg-transparent border-none outline-none text-white w-full shadow-none focus:ring-0" placeholder="Type your message..." autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- SCRIPT (SANGAT PENTING: Jangan sampai terhapus) -->
+    <script>
+        // 1. Logika Navigasi Tab (Agar menu bisa di-klik)
+        const navLinks = document.querySelectorAll('.nav-link');
+        const windows = document.querySelectorAll('.window-content');
+        const windowTitle = document.getElementById('window-title');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Menghapus status "aktif" dari semua menu dan konten
+                navLinks.forEach(l => l.classList.remove('active'));
+                windows.forEach(w => w.classList.remove('active'));
+
+                // Menambahkan status "aktif" ke menu yang di-klik
+                link.classList.add('active');
+                
+                // Menampilkan konten yang sesuai dengan ID
+                const targetId = link.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+                
+                // Memperbarui judul window di atas konten
+                windowTitle.innerText = `@Hendroabdh // ${targetId}`;
+            });
+        });
+
+        // 2. Simulasi Ping Server (Agar angka ping bergerak-gerak)
+        const pingElement = document.getElementById('ping');
+        setInterval(() => {
+            const basePing = 12;
+            const variance = Math.floor(Math.random() * 8) - 2; // Acak antara -2 hingga +5
+            pingElement.innerText = basePing + variance;
+        }, 2000);
+
+        // 3. Background Jaringan Animasi (Canvas)
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let particles = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 1.5;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#ff2a4b';
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const numParticles = Math.min(Math.floor((width * height) / 15000), 100);
+            for (let i = 0; i < numParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+                
+                // Draw connecting lines
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 120) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(8, 247, 254, ${1 - distance / 120})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // Jalankan saat ukuran layar berubah
+        window.addEventListener('resize', () => {
+            resize();
+            initParticles();
+        });
+
+        // Inisialisasi awal saat web dibuka
+        resize();
+        initParticles();
+        animate();
+    </script>
+</body>
+</html>
